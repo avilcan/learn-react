@@ -6,20 +6,24 @@
 
 -add PYTHON variable to your environment variables
 
--clone this git repository
+-clone this git repository (git clone https://github.com/avilcan/learn-react)
 
 -run the following comands in the root folder that you just pulled from git:
+
       npm install
+      
       npm run start
      
      
       
 #Linux:
 
--clone this git repository
+-clone this git repository (git clone https://github.com/avilcan/learn-react)
 
 -run the following comands in the root folder that you just pulled from git:
+
       npm install
+      
       npm run start
       
       
