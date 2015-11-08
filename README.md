@@ -1,18 +1,23 @@
-# learn-react
-
-Environment setup
+#Environment setup
 
 #Windows:
 
 -install python, a version >=2.5.0 and <3.0 ( https://www.python.org/downloads/windows/ )
+
 -add PYTHON variable to your environment variables
+
 -clone this git repository
+
 -run the following comands in the root folder that you just pulled from git:
       npm install
       npm run start
+     
+     
       
 #Linux:
+
 -clone this git repository
+
 -run the following comands in the root folder that you just pulled from git:
       npm install
       npm run start
