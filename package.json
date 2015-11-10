@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npm run serve | npm run dev",
-    "serve": "./node_modules/.bin/http-server -p 8080",
+    "serve": "./node_modules/.bin/http-server -p 8070",
     "dev": "webpack-dev-server -d --progress --inline --colors --port 8090"
   },
   "name": "Demo",
