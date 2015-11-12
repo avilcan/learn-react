@@ -19,7 +19,8 @@
     "reflux": "~0.2.12",
     "underscore": "~1.8.3",
     "classnames": "~2.1.3",
-    "react": "~0.13.3"
+    "react": "~0.13.3",
+    "react-dom": "^0.14.1"
   },
   "repository": {
     "type": "git",
