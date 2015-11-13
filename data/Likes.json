@@ -1,0 +1,62 @@
+module.exports = [
+  {
+    "_id": "5644ee4d4f4adf767e826e22",
+    "numOfLikes": 14,
+    "likedByUser": true,
+    "userId": "5642533b8f29570ab0e610d5"
+  },
+  {
+    "_id": "5644ee4da9d193963988ad3e",
+    "numOfLikes": 4,
+    "likedByUser": true,
+    "userId": "5642533bd3b2e1c699844729"
+  },
+  {
+    "_id": "5644ee4ded5cd55cad314241",
+    "numOfLikes": 22,
+    "likedByUser": true,
+    "userId": "5642533b59284ab6d2d97c2a"
+  },
+  {
+    "_id": "5644ee4d3eaf7d49e8e1db29",
+    "numOfLikes": 24,
+    "likedByUser": false,
+    "userId": "5642533bcea3c39524f92b71"
+  },
+  {
+    "_id": "5644ee4d5e20cbcd290e5c27",
+    "numOfLikes": 24,
+    "likedByUser": false,
+    "userId": "5642533baa1bf142d39349a7"
+  },
+  {
+    "_id": "5644ee4d23e4556faa5f6182",
+    "numOfLikes": 4,
+    "likedByUser": false,
+    "userId": "5642533b6cf6b14b6cf0f186"
+  },
+  {
+    "_id": "5644ee4dc1e03980bf77c2f8",
+    "numOfLikes": 5,
+    "likedByUser": true,
+    "userId": "5642533b0675ab21b494210f"
+  },
+  {
+    "_id": "5644ee4d1adcb0d1aad51bb4",
+    "numOfLikes": 13,
+    "likedByUser": false,
+    "userId": "5642533be1dae40d64637618"
+  },
+  {
+    "_id": "5644ee4d84ab9edee3f9ca38",
+    "numOfLikes": 21,
+    "likedByUser": true,
+    "userId": "5642533bca5daccfc1f96895"
+  },
+  {
+    "_id": "5644ee4d3e6a679578b9cfa7",
+    "numOfLikes": 19,
+    "likedByUser": false,
+    "userId": "5642533b37d1c4c3160b72ef"
+  }
+]
