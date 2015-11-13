@@ -13,7 +13,6 @@ module.exports = React.createClass({
 	getExpandedRow:function(expandCollapseClasses){
 		return (<tr onClick={this.rowClicked}>
 					<th></th>
-					<td></td>
 					<td>{this.props.participantData.name}</td>
 					<td>{this.props.participantData.age}</td>
 					<td>{this.props.participantData.gender}</td>
@@ -23,7 +22,6 @@ module.exports = React.createClass({
 	getCollapsedRow:function(expandCollapseClasses){
 		return (<tr>
 			<th></th>
-			<td></td>
 			<td><span className={expandCollapseClasses} onClick={this.rowClicked}></span></td>
 			<td></td>
 			<td></td>
@@ -37,13 +35,7 @@ module.exports = React.createClass({
 			"glyphicon-minus":this.state.expanded,
 			"glyphicon-plus":!this.state.expanded
 		})
-		return (<tr onClick={this.rowClicked}>
-					<th></th>
-					<td></td>
-					<td>{this.props.participantData.name}</td>
-					<td>{this.props.participantData.age}</td>
-					<td>{this.props.participantData.gender}</td>
-					<td></td>
-				</tr>)
+		return this.state.expanded ? 
+			this.getExpandedRow(expandCollapseClasses) : this.getCollapsedRow(expandCollapseClasses);
 	}
 });

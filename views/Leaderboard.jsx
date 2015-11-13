@@ -3,14 +3,15 @@ var Participants = require("../stores/Participants");
 var _ = require("underscore");
 module.exports = React.createClass({
 	componentDidMount:function() {
+		var that = this;
 		//listen is function from Reflux
 	      Participants.listen(function(){
-	      		this.forceUpdate();
+	      		that.forceUpdate();
 	      });
 	},
 	getParticipants:function(participants){
 		return _.map(participants, function(p){
-			return (<Participant participantData={p} />)
+			return (<Participant key={p._id} participantData={p} />)
 		});
 	},
 	render:function(){
