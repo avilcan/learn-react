@@ -1,0 +1,94 @@
+Static HTML:
+
+1.Leader board
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <table class="table">
+	<thead>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Likes</th>
+  </tr>
+</thead>
+<tbody>
+	<tr>
+		<th></th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</tbody>	  	
+  </table>
+</div>)
+
+2.LikeButton
+
+<span class="span4 entry-like">
+	<span class="like">
+		<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+		<span class="like-count" data-rel="tooltip" data-html="true">
+			<span class="glyphicon glyphicon-heart"></span>
+		</span>
+	</span>
+</span>
+
+
+var nextUsers =[{
+    "_id": "5642533b052dc3ce5b446e9f",
+    "age": 24,
+    "name": "Debbie Britt",
+    "gender": "female",
+    "email": "debbiebritt@cubicide.com",
+    "phone": "+1 (987) 489-2983",
+    "address": "175 Colonial Court, Riviera, West Virginia, 814"
+  },
+  {
+    "_id": "5642533bc6c2916641f95257",
+    "age": 21,
+    "name": "Warren Alvarado",
+    "gender": "male",
+    "email": "warrenalvarado@cubicide.com",
+    "phone": "+1 (934) 463-2775",
+    "address": "848 Stratford Road, Faywood, Ohio, 3828"
+  },
+  {
+    "_id": "5642533b4dd3cbf716ae4f41",
+    "age": 28,
+    "name": "Cathleen Erickson",
+    "gender": "female",
+    "email": "cathleenerickson@cubicide.com",
+    "phone": "+1 (935) 494-3020",
+    "address": "126 Downing Street, Martinsville, New Mexico, 2178"
+  },
+  {
+    "_id": "5642533b886dfcb6a3c94e21",
+    "age": 37,
+    "name": "Jewel Dyer",
+    "gender": "female",
+    "email": "jeweldyer@cubicide.com",
+    "phone": "+1 (977) 411-2155",
+    "address": "149 Harden Street, Nettie, Iowa, 8377"
+  },
+  {
+    "_id": "5642533b5340579a283505bd",
+    "age": 31,
+    "name": "Natalia Perkins",
+    "gender": "female",
+    "email": "nataliaperkins@cubicide.com",
+    "phone": "+1 (939) 525-2143",
+    "address": "227 Utica Avenue, Glidden, Florida, 6283"
+  },
+  {
+    "_id": "5642533b4a1c6f6088fe64e6",
+    "age": 27,
+    "name": "Saunders Griffith",
+    "gender": "male",
+    "email": "saundersgriffith@cubicide.com",
+    "phone": "+1 (826) 415-3389",
+    "address": "684 Seacoast Terrace, Chesterfield, Indiana, 8270"
+  }]
