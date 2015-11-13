@@ -10,18 +10,26 @@ module.exports = React.createClass({
 			expanded:!this.state.expanded
 		});
 	},
-	getExpandedRow:function(){
+	getExpandedRow:function(expandCollapseClasses){
 		return (<tr onClick={this.rowClicked}>
 					<th></th>
 					<td></td>
 					<td>{this.props.participantData.name}</td>
 					<td>{this.props.participantData.age}</td>
 					<td>{this.props.participantData.gender}</td>
-					<td></td>
+					<td><span className={expandCollapseClasses} onClick={this.rowClicked}></span></td>
 				</tr>);
 	},
-	getCollapsedRow:function(){
-		return (<tr></tr>);
+	getCollapsedRow:function(expandCollapseClasses){
+		return (<tr>
+			<th></th>
+			<td></td>
+			<td><span className={expandCollapseClasses} onClick={this.rowClicked}></span></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>);
+		
 	},
 	render:function(){
 		var expandCollapseClasses = classNames({
