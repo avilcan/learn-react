@@ -1,9 +1,23 @@
 var Participant = require("./Participant");
+var Participants = require("../stores/Participants");
+var _ = require("underscore");
 module.exports = React.createClass({
+	componentDidMount:function() {
+		//listen is function from Reflux
+	      Participants.listen(function(){
+	      		this.forceUpdate();
+	      });
+	},
+	getParticipants:function(participants){
+		return _.map(participants, function(p){
+			return (<Participant participantData={p} />)
+		});
+	},
 	render:function(){
-		return (<div class="panel panel-default">
-			  <div class="panel-heading">Panel heading</div>
-			  <table class="table">
+		var participants = Participants.getParticipants();
+		return (<div className="panel panel-default">
+			  <div className="panel-heading">Panel heading</div>
+			  <table className="table">
 				<thead>
 			  <tr>
 			    <th>#</th>
@@ -14,7 +28,7 @@ module.exports = React.createClass({
 			  </tr>
 			</thead>
 			<tbody>
-				<Participant />
+				{this.getParticipants(participants)}
 			</tbody>	  	
 			  </table>
 			</div>);
