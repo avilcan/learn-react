@@ -1,4 +1,6 @@
 var classNames = require("classnames");
+var _ = require("underscore");
+var LikeButton = require("../views/LikeButton");
 module.exports = React.createClass({
 	getInitialState:function(){
 		return {
@@ -11,12 +13,13 @@ module.exports = React.createClass({
 		});
 	},
 	getExpandedRow:function(expandCollapseClasses){
-		return (<tr onClick={this.rowClicked}>
-					<th></th>
+		var likeData = _.find(this.props.likes,l=>l.userId === this.props.participantData._id);
+		return (<tr>
+					<th onClick={this.rowClicked}><span className={expandCollapseClasses} onClick={this.rowClicked}></span></th>
 					<td>{this.props.participantData.name}</td>
 					<td>{this.props.participantData.age}</td>
 					<td>{this.props.participantData.gender}</td>
-					<td><span className={expandCollapseClasses} onClick={this.rowClicked}></span></td>
+					<td><LikeButton likeData={likeData || {}}/></td>
 				</tr>);
 	},
 	getCollapsedRow:function(expandCollapseClasses){
