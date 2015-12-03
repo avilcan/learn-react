@@ -1,6 +1,7 @@
 var participants = require("../data/Participants.json");
 var Reflux = require("reflux");
 var Actions = require("../actions/Actions");
+var Immutable = require("immutable");
 module.exports = Reflux.createStore({
 	init:function(){
 		this._participants = null;

@@ -1,4 +1,4 @@
 var ReactDOM = require('react-dom');
 var Leaderboard = require('./views/Leaderboard');
-React.render(<Leaderboard/>,
+ReactDOM.render(<Leaderboard/>,
 	document.getElementById("content"));

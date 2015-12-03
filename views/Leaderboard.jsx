@@ -1,4 +1,5 @@
 var Participant = require("./Participant");
+var ProParticipant = require("./ProParticipant");
 var Participants = require("../stores/Participants");
 var Likes = require("../stores/Likes");
 var _ = require("underscore");
@@ -15,10 +16,13 @@ module.exports = React.createClass({
 	},
 	getParticipants:function(participants,likesData){
 		return _.map(participants, function(p){
-			return (<Participant 
+			return p.isPro ?(<ProParticipant 
 						key={p._id} 
 						participantData={p} 
-						likes = {likesData}/>)
+						likes = {likesData}/>):(<Participant 
+												key={p._id} 
+												participantData={p} 
+												likes = {likesData}/>)
 		});
 	},
 	render:function(){
