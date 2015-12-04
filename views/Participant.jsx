@@ -1,25 +1,16 @@
 var classNames = require("classnames");
 var _ = require("underscore");
 var LikeButton = require("../views/LikeButton");
+var ParticipantMixin = require("../mixins/ParticipantMixin");
+var PureRenderMixin = require("react-addons-pure-render-mixin");
 module.exports = React.createClass({
-	getInitialState:function(){
-		return {
-			expanded:true
-		}
-	},
-	rowClicked:function(){
-		this.setState({
-			expanded:!this.state.expanded
-		});
-	},
+	mixins:[ParticipantMixin,PureRenderMixin],
 	getExpandedRow:function(expandCollapseClasses){
-		var likeData = _.find(this.props.likes,l=>l.userId === this.props.participantData._id);
 		return (<tr>
 					<th onClick={this.rowClicked}><span className={expandCollapseClasses} onClick={this.rowClicked}></span></th>
-					<td>{this.props.participantData.name}</td>
-					<td>{this.props.participantData.age}</td>
-					<td>{this.props.participantData.gender}</td>
-					<td><LikeButton likeData={likeData || {}}/></td>
+					<td>{this.props.participantData.get("name")}</td>
+					<td>{this.props.participantData.get("age")}</td>
+					<td>{this.props.participantData.get("gender")}</td>
 				</tr>);
 	},
 	getCollapsedRow:function(expandCollapseClasses){
@@ -33,6 +24,7 @@ module.exports = React.createClass({
 		
 	},
 	render:function(){
+		console.log("participant render");
 		var expandCollapseClasses = classNames({
 			"glyphicon":true,
 			"glyphicon-minus":this.state.expanded,

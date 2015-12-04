@@ -1,23 +1,15 @@
 var _ = require("underscore");
+var ParticipantMixin = require("../mixins/ParticipantMixin");
+var PureRenderMixin = require("react-addons-pure-render-mixin");
 module.exports = React.createClass({
-	getInitialState:function(){
-		return {
-			expanded:true
-		}
-	},
-	rowClicked:function(){
-		this.setState({
-			expanded:!this.state.expanded
-		});
-	},
+	mixins:[ParticipantMixin,PureRenderMixin],
 	getExpandedRow:function(){
-		var likeData = _.find(this.props.likes,l=>l.userId === this.props.participantData._id);
 		return (<tr>
 					<th onClick={this.rowClicked}><span className="glyphicon glyphicon-minus" onClick={this.rowClicked}></span></th>
-					<td>{this.props.participantData.name}</td>
-					<td>{this.props.participantData.age}</td>
-					<td>{this.props.participantData.gender}</td>
-					<td>{this.props.participantData.sponsor}</td>
+					<td>{this.props.participantData.get("name")}</td>
+					<td>{this.props.participantData.get("age")}</td>
+					<td>{this.props.participantData.get("gender")}</td>
+					<td>{this.props.participantData.get("sponsor")}</td>
 				</tr>);
 	},
 	getCollapsedRow:function(){
@@ -31,6 +23,7 @@ module.exports = React.createClass({
 		
 	},
 	render:function(){
+		console.log("render pro user");
 		return this.state.expanded ? 
 			this.getExpandedRow() : this.getCollapsedRow();
 	}

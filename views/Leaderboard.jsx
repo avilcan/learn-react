@@ -15,14 +15,12 @@ module.exports = React.createClass({
 	      });
 	},
 	getParticipants:function(participants,likesData){
-		return _.map(participants, function(p){
-			return p.isPro ?(<ProParticipant 
-						key={p._id} 
-						participantData={p} 
-						likes = {likesData}/>):(<Participant 
-												key={p._id} 
-												participantData={p} 
-												likes = {likesData}/>)
+		return participants.map(function(p){
+			return p.get("isPro") ?(<ProParticipant 
+						key={p.get("_id")} 
+						participantData={p} />):(<Participant 
+												key={p.get("_id")} 
+												participantData={p}/>)
 		});
 	},
 	render:function(){
