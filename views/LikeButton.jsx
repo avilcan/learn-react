@@ -4,11 +4,11 @@ module.exports = React.createClass({
 	},
 	getInitialState:function(){
 		return {
-			liked:this.props.likeData.likedByUser
+			liked:this.props.likeData.get("likedByUser")
 		};
 	},
 	likeUnlike:function(){
-		this.state.liked ? Actions.unlike(this.props.likeData.userId) : Actions.like(this.props.likeData.userId);
+		this.state.liked ? Actions.unlike(this.props.likeData.get("userId")) : Actions.like(this.props.likeData.get("userId"));
 		this.setState({
 			liked:!this.state.liked
 		});
@@ -20,7 +20,7 @@ module.exports = React.createClass({
 					<span className="glyphicon glyphicon-thumbs-up" onClick={this.likeUnlike} aria-hidden="true">{this.state.liked ? "Unlike" : "Like"}</span>
 					<span className="like-count" data-rel="tooltip" data-html="true">
 						<span className="glyphicon glyphicon-heart"></span>
-						{this.props.likeData.numOfLikes || 0}
+						{this.props.likeData.get("numOfLikes") || 0}
 					</span>
 				</span>
 			</span>);

@@ -18,9 +18,10 @@ module.exports = React.createClass({
 		return participants.map(function(p){
 			return p.get("isPro") ?(<ProParticipant 
 						key={p.get("_id")} 
-						participantData={p} />):(<Participant 
+						participantData={p}/>):(<Participant 
 												key={p.get("_id")} 
-												participantData={p}/>)
+												participantData={p}
+												likesData = {likesData}/>)
 		});
 	},
 	render:function(){
